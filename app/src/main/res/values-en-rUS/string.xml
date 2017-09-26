@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Geometric Figures</string>
+
+    <string-array name="figuras">
+        <item>Circle</item>
+        <item>Oval</item>
+        <item>Square</item>
+        <item>Rect</item>
+        <item>Free drawing</item>
+    </string-array>
+
+    <string-array name="descripciones">
+        <item>It is the shape of a ball or the sun.</item>
+        <item>It is a circle as long as an egg.</item>
+        <item>It is the figure of four equal sides.</item>
+        <item>It has two long sides and two short sides.</item>
+        <item>Draw some figures freely.</item>
+    </string-array>
+</resources>

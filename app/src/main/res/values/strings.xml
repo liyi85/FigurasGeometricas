@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Figuras Geometricas</string>
+
+    <string-array name="figuras">
+        <item>Círculos</item>
+        <item>Óvalo</item>
+        <item>Cuadrado</item>
+        <item>Rectángulo</item>
+        <item>Dibujo libre</item>
+    </string-array>
+
+    <string-array name="descripciones">
+        <item>Es la forma de una pelota o el sol.</item>
+        <item>Es un círculo alargado como un huevo.</item>
+        <item>Es la figura de cuatro lados iguales.</item>
+        <item>Tiene dos lados largos y dos cortos.</item>
+        <item>Dibuja algunas figuras libremente.</item>
+    </string-array>
+
+
+</resources>
