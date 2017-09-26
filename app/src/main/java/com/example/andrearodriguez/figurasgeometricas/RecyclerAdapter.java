@@ -1,6 +1,7 @@
 package com.example.andrearodriguez.figurasgeometricas;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,6 +69,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
             RecyclerViewHolder vh=(RecyclerViewHolder)v.getTag();
             int posicion = vh.getAdapterPosition();
             Toast.makeText(context,"La posicion es"+posicion,Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(context, Main2Activity.class);
+            intent.putExtra("posicion", posicion);
+            context.startActivity(intent);
+
         }
     };
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Figuras Geometricas</string>
+    <string name="app_name">Figuras Geométricas</string>
 
     <string-array name="figuras">
         <item>Círculos</item>
