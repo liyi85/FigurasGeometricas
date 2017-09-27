@@ -18,6 +18,7 @@ public class Main2Activity extends AppCompatActivity {
             Lienzo lienzo = new Lienzo(this);
             setContentView(lienzo);
             lienzo.figura = posicion;
+
         }else if (posicion == 4) {
                 LienzoLibre lienzoLibre = new LienzoLibre(this);
                 setContentView(lienzoLibre);
