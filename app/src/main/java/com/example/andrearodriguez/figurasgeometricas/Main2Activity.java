@@ -10,15 +10,16 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Bundle datos = this.getIntent().getExtras();
         int posicion = datos.getInt("posicion");
-
+        Lienzo lienzo = new Lienzo(this);
+        setContentView(lienzo);
         arreglo = getResources().getStringArray(R.array.figuras);
 
         switch (posicion){
             case 0:
                 setTitle(arreglo[posicion]);
+
                 break;
             case 1:
                 setTitle(arreglo[posicion]);
@@ -33,9 +34,7 @@ public class Main2Activity extends AppCompatActivity {
                 setTitle(arreglo[posicion]);
                 break;
         }
-
-        Lienzo lienzo =new Lienzo(this);
-        setContentView(lienzo);
+        lienzo.figura = posicion;
 
     }
 

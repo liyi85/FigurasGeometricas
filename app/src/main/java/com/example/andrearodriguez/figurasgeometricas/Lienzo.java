@@ -3,6 +3,7 @@ package com.example.andrearodriguez.figurasgeometricas;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -12,10 +13,13 @@ import android.view.View;
 
 public class Lienzo extends View {
 
-    float x = 200;
-    float y = 200;
+    float x = -40;
+    float y = -40;
     int id = 0;
+    int figura;
 
+    Paint paint = new Paint();
+    Path path = new Path();
 
     public Lienzo(Context context) {
         super(context);
@@ -24,16 +28,35 @@ public class Lienzo extends View {
     @Override
     public void onDraw(Canvas canvas){
         super.onDraw(canvas);
-        Paint paint = new Paint();
+
         paint.setColor(getResources().getColor(R.color.colorAccent));
-        int alto = canvas.getHeight();
-        int ancho = canvas.getWidth();
 
         paint.setStyle(Paint.Style.FILL);
-        canvas.drawOval(x, y, x+90, y+50, paint);
+        paint.setAntiAlias(true);
+
+
+        Path.Direction direction1 = Path.Direction.CW;
+        canvas.drawPath(path, paint);
+
+        switch (figura){
+            case 0:
+                path.addCircle(x, y, 50, direction1);
+                break;
+            case 1:
+                path.addOval((x-60), (y-30), (x+60), (y+30), direction1);
+                break;
+            case 2:
+                path.addRect((x-60), (y-60), (x+60), (y+60), direction1);
+                break;
+            case 3:
+                path.addRect((x-60), (y-30), (x+60), (y+30), direction1);
+                break;
+
+        }
 
     }
     public boolean onTouchEvent (MotionEvent event){
+
         int a = event.getAction();
         x = event.getX();
         y = event.getY();
@@ -44,7 +67,7 @@ public class Lienzo extends View {
             id=2;
         }
         invalidate();
-        return false;
+        return true;
     }
 
 }
