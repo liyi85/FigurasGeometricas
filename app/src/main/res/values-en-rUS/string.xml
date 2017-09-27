@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Geometric Shapes</string>
+    <string name="mensaje_circulos">Here you can draw some circles</string>
+    <string name="mensaje_ovalos">Here you can draw some ovals</string>
+    <string name="mensaje_cuadrados">Here you can draw some squares</string>
+    <string name="mensaje_rectangulos">Here you can draw some rectangles</string>
+    <string name="mensaje_libre">Here you can draw some free shapes</string>
 
     <string-array name="figuras">
         <item>Circle</item>

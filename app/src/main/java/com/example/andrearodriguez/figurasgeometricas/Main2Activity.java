@@ -2,6 +2,7 @@ package com.example.andrearodriguez.figurasgeometricas;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -12,29 +13,40 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Bundle datos = this.getIntent().getExtras();
         int posicion = datos.getInt("posicion");
-        Lienzo lienzo = new Lienzo(this);
-        setContentView(lienzo);
-        arreglo = getResources().getStringArray(R.array.figuras);
 
-        switch (posicion){
-            case 0:
-                setTitle(arreglo[posicion]);
-
-                break;
-            case 1:
-                setTitle(arreglo[posicion]);
-                break;
-            case 2:
-                setTitle(arreglo[posicion]);
-                break;
-            case 3:
-                setTitle(arreglo[posicion]);
-                break;
-            case 4:
-                setTitle(arreglo[posicion]);
-                break;
+        if (posicion < 4) {
+            Lienzo lienzo = new Lienzo(this);
+            setContentView(lienzo);
+            lienzo.figura = posicion;
+        }else if (posicion == 4) {
+                LienzoLibre lienzoLibre = new LienzoLibre(this);
+                setContentView(lienzoLibre);
         }
-        lienzo.figura = posicion;
+
+            arreglo = getResources().getStringArray(R.array.figuras);
+
+            switch (posicion) {
+                case 0:
+                    setTitle(arreglo[posicion]);
+                    Toast.makeText(this, R.string.mensaje_circulos, Toast.LENGTH_SHORT).show();
+                    break;
+                case 1:
+                    setTitle(arreglo[posicion]);
+                    Toast.makeText(this, R.string.mensaje_ovalos, Toast.LENGTH_SHORT).show();
+                    break;
+                case 2:
+                    setTitle(arreglo[posicion]);
+                    Toast.makeText(this, R.string.mensaje_cuadrados, Toast.LENGTH_SHORT).show();
+                    break;
+                case 3:
+                    setTitle(arreglo[posicion]);
+                    Toast.makeText(this, R.string.mensaje_rectangulos, Toast.LENGTH_SHORT).show();
+                    break;
+                case 4:
+                    setTitle(arreglo[posicion]);
+                    Toast.makeText(this, R.string.mensaje_libre, Toast.LENGTH_SHORT).show();
+                    break;
+            }
 
     }
 

@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Figuras Geométricas</string>
+    <string name="mensaje_circulos">Aquí podras dibujar algunos círculos</string>
+    <string name="mensaje_ovalos">Aquí podras dibujar algunos óvalos</string>
+    <string name="mensaje_cuadrados">Aquí podras dibujar algunos cuadrados</string>
+    <string name="mensaje_rectangulos">Aquí podras dibujar algunos rectangulos</string>
+    <string name="mensaje_libre">Aquí podras dibujar algunas lineas de forma libre</string>
 
     <string-array name="figuras">
         <item>Círculos</item>
